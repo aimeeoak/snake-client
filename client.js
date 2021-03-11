@@ -7,9 +7,23 @@ const connect = function() {
   });
   conn.setEncoding('utf8'); 
 
-  conn.on('data', (data) => {
-    console.log('server says ', data);
+  conn.on('connect', () => {
+    console.log('Successfully connected to game server');
+    console.log("Name: AEG")
   });
+
+  conn.on('connect', () => {
+    console.log('Move: up');
+    console.log('Move: down');
+    console.log('Move: up');
+    console.log('Move: left');
+    console.log('Move: right');
+  });
+
+  conn.on('data', (data) => {
+    console.log(data);
+  });
+  
 
   return conn;
 }
