@@ -8,16 +8,8 @@ const connect = function() {
   conn.setEncoding('utf8'); 
 
   conn.on('connect', () => {
-    console.log('Successfully connected to game server');
-    console.log("Name: AEG")
-  });
-
-  conn.on('connect', () => {
-    console.log('Move: up');
-    console.log('Move: down');
-    console.log('Move: up');
-    console.log('Move: left');
-    console.log('Move: right');
+    conn.on('Successfully connected to game server');
+    conn.on("Name: AEG")
   });
 
   conn.on('data', (data) => {
